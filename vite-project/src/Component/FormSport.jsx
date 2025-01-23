@@ -63,7 +63,7 @@ const FormSport = () => {
 
     try {
       if (formId) {
-        await axios.put(`https://server-backend.azurewebsites.net/api/formdata${formId}`, formData);
+        await axios.put(`https://server-backend.azurewebsites.net/api/formdata/${formId}`, formData);
         console.log("Form Data Updated:", formData);
       } else {
         const response = await axios.post("https://server-backend.azurewebsites.net/api/formdata", formData);
